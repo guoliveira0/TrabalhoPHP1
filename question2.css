@@ -1,0 +1,32 @@
+.veryLowGrave {
+    background-color: yellow;
+    width: 1px;
+  }
+  .veryLow {
+    background-color: aqua;
+    width: 1px;
+  }
+  .low {
+    background-color: green;
+    width: 1px;
+  }
+  .ideal {
+    background-color: blueviolet;
+    width: 1px;
+  }
+  .overWeight {
+    background-color: brown;
+    width: 1px;
+  }
+  .obesityI {
+    background-color: burlywood;
+    width: 1px;
+  }
+  .obesityII {
+    background-color: crimson;
+    width: 1px;
+  }
+  .obesityIII {
+    background-color: deeppink;
+    width: 1px;
+  }
