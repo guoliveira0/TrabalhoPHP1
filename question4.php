@@ -29,6 +29,56 @@
             </fieldset>
         </form>
         <table>
+            <?php
+            $initialContribution = floatval($_GET['initialContribution']);
+            $period = (int)$_GET['period'];
+            $income = floatval($_GET['income']);
+            $contribution = floatval($_GET['contribution']);
+            function calc($initialContribution, $income, $contribution)
+            {
+                $results = array(
+                    'income' => '',
+                    'total' => ''
+                );
+                $results['income'] = ($initialContribution + $contribution) * ($income / 100);
+                $results['total'] = ($initialContribution + $results['income'] + $contribution);
+                return $results;
+            }
+
+
+            if (isset($_GET['initialContribution'])) {
+                echo ("<tr>
+                <th>Mês</th>
+                <th>Valor Inicial(R$)</th>
+                <th>Aporte(R$)</th>
+                <th>Rendimento(R$)</th>
+                <th>Total(R$</th>
+                </tr>");
+            }
+            for ($x = 1; $x < $period + 1; $x++) {
+
+                echo ("<tr>");
+                echo ("<td>$x</td>");
+                if ($x == 1) {
+                    echo ("<td>$initialContribution</td>");
+                    $result = calc($initialContribution, $income, 0);
+                    $finalincome = round($result['income'], 2);
+                    $total = round($result['total'], 2);
+                    echo ("<td>----</td>");
+                    echo ("<td>$finalincome</td>");
+                    echo ("<td>$total</td>");
+                } else {
+                    echo ("<td>$total</td>");
+                    $result = calc($total, $income, $contribution);
+                    $finalincome = round($result['income'], 2);
+                    $total = round($result['total'], 2);
+                    echo ("<td>$contribution</td>");
+                    echo ("<td>$finalincome</td>");
+                    echo ("<td>$total</td>");
+                }
+                echo ("</tr>");
+            }
+            ?>
         </table>
         <a href="index.php">Página Inicial</a>
     </main>
