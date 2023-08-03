@@ -103,5 +103,7 @@
         </script>
         <a href="index.php">Página inicial</a>
     </main>
-    <footer></footer>
+    <footer>
+    <p>Luiz Gustavo/Maria Fernanda - &copy;2023</p>
+    </footer>
 </body>

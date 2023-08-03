@@ -85,7 +85,7 @@
     </main>
 
     <footer>
-
+    <p>Luiz Gustavo/Maria Fernanda - &copy;2023</p>
     </footer>
 </body>
 
