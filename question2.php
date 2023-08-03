@@ -18,7 +18,15 @@
             <thead>
                 <tr>
                     <th></th>
-                    </tbody>
+                    <?php
+                    for ($x = 46; $x < 120 + 1; $x++) {
+                        echo ("<th>$x</th>");
+                    }
+                    ?>
+                </tr>
+            </thead>
+
+            
         </table>
         <a href="index.php">Página Principal</a>
     </main>
