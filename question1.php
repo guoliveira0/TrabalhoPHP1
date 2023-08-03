@@ -42,6 +42,60 @@
 
             </fieldset>
         </form>
+        <?php
+        $quantity = $_GET['quant'];
+        $type = $_GET['elements'];
+        switch ($type) {
+            case "text":
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<input type=\"text\" name=\"text$x\" id=\"text$x\"><br>");
+                }
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<code>&#60;input type=\"text\" name=\"text$x\" id=\"text$x\"&#62;</code><br>");
+                }
+                break;
+            case "password":
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<input type=\"password\" name=\"password$x\" id=\"password$x\"><br>");
+                }
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<code>&#60;input type=\"password\" name=\"password$x\" id=\"password$x\"&#62;</code><br>");
+                }
+                break;
+            case "button":
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<input type=\"button\" name=\"button$x\" id=\"button$x\" value=\"Botão $x\"><br>");
+                }
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<code>&#60;input type=\"button\" name=\"button$x\" id=\"button$x\" value=\"Botão $x\"&#62;</code><br>");
+                }
+                break;
+            case "radio":
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<input type=\"radio\" name=\"radio\" id=\"radio$x\" value=\" Radio $x\"><br>");
+                }
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<code>&#60;input type=\"radio\" name=\"radio\" id=\"radio$x\" value=\" Radio $x\" &#62;</code><br>");
+                }
+                break;
+            case "checkbox":
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<input type=\"checkbox\" name=\"checkbox$x\" id=\"checkbox$x\"><br>");
+                }
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<code>&#60;input type=\"checkbox\" name=\"checkbox$x\" id=\"checkbox$x\"&#62;</code><br>");
+                }
+                break;
+            case "range":
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<input type=\"range\" name=\"range$x\" id=\"range$x\" value=\" Range $x\"><br>");
+                }
+                for ($x = 1; $x < $quantity + 1; $x++) {
+                    echo ("<code>&#60;input type=\"range\" name=\"range$x\" id=\"range$x\" value=\" Range $x\"&#62;</code><br>");
+                }
+                break;
+        }
+        ?>
         <script>
             function sendForm() {
                 document.getElementById("Form").submit();
