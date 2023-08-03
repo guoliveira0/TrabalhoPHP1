@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Questão 3</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/5eb1deab40.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,34 +18,34 @@
         <?php
         switch ($_GET['question1']) {
             case "A":
-                echo ("1. {$_GET['question1']} Correto<br>");
+                echo ("1. {$_GET['question1']} <i class=\"fa-regular fa-circle-check\"></i><br>");
                 break;
             default:
-                echo ("1. {$_GET['question1']} Incorreto<br>");
+                echo ("1. {$_GET['question1']} <i class=\"fa-regular fa-circle-xmark\"></i><br>");
                 break;
         }
         switch ($_GET['question2']) {
             case "C":
-                echo ("2. {$_GET['question2']} Correto<br>");
+                echo ("2. {$_GET['question2']} <i class=\"fa-regular fa-circle-check\"></i><br>");
                 break;
             default:
-                echo ("2. {$_GET['question2']} Incorreto<br>");
+                echo ("2. {$_GET['question2']} <i class=\"fa-regular fa-circle-xmark\"></i><br>");
                 break;
         }
         switch ($_GET['question3']) {
             case "E":
-                echo ("3. {$_GET['question3']} Correto<br>");
+                echo ("3. {$_GET['question3']} <i class=\"fa-regular fa-circle-check\"></i><br>");
                 break;
             default:
-                echo ("3. {$_GET['question3']} Incorreto<br>");
+                echo ("3. {$_GET['question3']} <i class=\"fa-regular fa-circle-xmark\"></i><br>");
                 break;
         }
         switch ($_GET['question4']) {
             case "B":
-                echo ("4. {$_GET['question4']} Correto<br>");
+                echo ("4. {$_GET['question4']} <i class=\"fa-regular fa-circle-check\"></i><br>");
                 break;
             default:
-                echo ("4. {$_GET['question4']} Incorreto<br>");
+                echo ("4. {$_GET['question4']} <i class=\"fa-regular fa-circle-xmark\"></i><br>");
                 break;
         }
         ?>

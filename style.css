@@ -1,0 +1,12 @@
+h1{
+    background-color: gray;
+}
+a{
+    text-decoration: dotted;
+}
+a:hover{
+    text-decoration: dashed black;
+}
+a:visited{
+    text-decoration: none;
+}
