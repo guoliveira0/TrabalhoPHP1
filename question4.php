@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -31,6 +31,7 @@
         </form>
         <table>
             <?php
+            error_reporting(0);
             $initialContribution = floatval($_GET['initialContribution']);
             $period = (int)$_GET['period'];
             $income = floatval($_GET['income']);
