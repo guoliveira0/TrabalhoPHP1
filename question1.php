@@ -42,7 +42,9 @@
 
             </fieldset>
         </form>
+        
         <?php
+        error_reporting(0);
         $quantity = $_GET['quant'];
         $type = $_GET['elements'];
         switch ($type) {
@@ -51,7 +53,7 @@
                     echo ("<input type=\"text\" name=\"text$x\" id=\"text$x\"><br>");
                 }
                 for ($x = 1; $x < $quantity + 1; $x++) {
-                    echo ("<code>&#60;input type=\"text\" name=\"text$x\" id=\"text$x\"&#62;</code><br>");
+                    echo ("<code>&#60;input type=\"text\" name=\"text$x\" id=\"text$x\"&#62; </code><br>");
                 }
                 break;
             case "password":
@@ -72,18 +74,18 @@
                 break;
             case "radio":
                 for ($x = 1; $x < $quantity + 1; $x++) {
-                    echo ("<input type=\"radio\" name=\"radio\" id=\"radio$x\" value=\" Radio $x\"><br>");
+                    echo ("<input type=\"radio\" name=\"radio\" id=\"radio$x\" value=\" Radio $x\"><label for=\"text\">Radio $x </label><br>");
                 }
                 for ($x = 1; $x < $quantity + 1; $x++) {
-                    echo ("<code>&#60;input type=\"radio\" name=\"radio\" id=\"radio$x\" value=\" Radio $x\" &#62;</code><br>");
+                    echo ("<code>&#60;input type=\"radio\" name=\"radio\" id=\"radio$x\" value=\" Radio $x\" &#62; &#60;label for=\"radio\"&#62;Radio $x &#60;/label&#62;</code><br>");
                 }
                 break;
             case "checkbox":
                 for ($x = 1; $x < $quantity + 1; $x++) {
-                    echo ("<input type=\"checkbox\" name=\"checkbox$x\" id=\"checkbox$x\"><br>");
+                    echo ("<input type=\"checkbox\" name=\"checkbox$x\" id=\"checkbox$x\"><label for=\"text\">Caixa de Seleção $x </label><br>");
                 }
                 for ($x = 1; $x < $quantity + 1; $x++) {
-                    echo ("<code>&#60;input type=\"checkbox\" name=\"checkbox$x\" id=\"checkbox$x\"&#62;</code><br>");
+                    echo ("<code>&#60;input type=\"checkbox\" name=\"checkbox$x\" id=\"checkbox$x\"&#62; &#60;label for=\"checkbox\"&#62;Caixa de Seleção $x &#60;/label&#62;</code><br>");
                 }
                 break;
             case "range":
