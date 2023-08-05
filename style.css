@@ -1,12 +1,18 @@
 h1{
-    background-color: gray;
+    background-color: dodgerblue;
 }
 a{
-    text-decoration: dotted;
+    text-decoration: solid;
+    color: black;
 }
 a:hover{
-    text-decoration: dashed black;
+    color:dodgerblue;
+    text-decoration: dotted;
 }
 a:visited{
     text-decoration: none;
+
+}
+a:active{
+    color: black;
 }
